@@ -32,3 +32,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = 'email'
 
+    def get_short_name(self):
+        "Returns the short name for the user."
+        return self.name
+
